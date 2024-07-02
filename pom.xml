@@ -5,7 +5,7 @@
   <artifactId>jenkins-git-integration1</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jenkins-git-integration Maven Webapp</name>
+  <name>jenkins-git-integration Maven</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -17,5 +17,18 @@
   </dependencies>
   <build>
     <finalName>jenkins-git-integration</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.1.2184</version>
+      </plugin>
+    </plugins>
   </build>
+  <properties>
+    <sonar.projectKey>Maven-Sonarqube-auto</sonar.projectKey>
+    <sonar.projectName>Maven-Sonarqube-auto</sonar.projectName>
+    <sonar.host.url>http://34.135.72.234:9000/</sonar.host.url>
+    <sonar.login>sqa_1fa149e4fea62e70f1ffe558bdd9ef10a60dbaec</sonar.login>
+  </properties>
 </project>
